@@ -1,0 +1,19 @@
+{
+	"name": "frontend-applicant-test",
+	"version": "1.0.0",
+	"description": "Programming test for Industry Weapon applicants",
+	"main": "index.html",
+	"author": "Industry Weapon",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/richwertz/IndustryWeaponCodingChallenge.git"
+	},
+	"dependencies": {
+		"angular": "^1.7.6"
+	},
+	"devDependencies": {
+		"gulp": "^4.0.0",
+		"gulp-webserver": "^0.9.1"
+	}
+}

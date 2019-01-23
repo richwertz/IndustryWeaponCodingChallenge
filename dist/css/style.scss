@@ -1,0 +1,80 @@
+$background: #fff;
+$text-light: #eee; //inside nation bar
+$text-dark: #666; //from image attachments
+
+$channels: #0B62A4; //blue
+$devices: #18C918; //green
+
+$font: 'Montserrat', sans-serif;
+
+body {
+	font-size: 1.1em;
+	line-height: 1.4em;
+	background-color: $background;
+	color: $text-dark;
+	font-family: $font;
+}
+
+h1 {
+	font-size: 2.0em;
+	padding: 0 0 0.5em 0;
+	border-bottom: 3px solid $text-dark;
+}
+h2 {
+	font-size: 1.8em;
+	font-weight: 600;
+}
+h3 {
+	font-size: 1.6em;
+	font-weight: 500;
+	padding: 0 0 0.3em 0;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.app {
+	.app--header {
+		.app--header-img {
+			text-align: center;
+		}
+	}
+	.app--body {
+		.app--body-report-header {
+			margin-bottom: 1.3em;
+			.app--body-content-report {
+				margin-bottom: 1em;
+			}
+			.app--body-channels-count {
+				margin: 2px 0;
+				color: $channels;
+			}
+			.app--body-devices-count {
+				margin: 2px 0;
+				color: $devices;
+			}
+		}
+		.nation--select-dropdown {
+			#nation-dropdown {
+				font-size: 1rem;
+				margin-bottom: 1em;
+			}
+		}
+		.nation--selected {
+			.nation--selected-graphs {
+				width: 100%;
+				padding: 2px;
+				table {  
+					border-collapse: collapse;
+					border-spacing: 0;
+				}
+			}
+			.nation--selected-name {
+				font-size: 1rem;
+				width: 30%;
+			}
+		}
+	}
+}

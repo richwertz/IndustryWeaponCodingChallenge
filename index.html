@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<!DOCTYPE html>
+<head>
+		<title>Frontend Applicant Test</title>
+
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="dist/app.js"></script>
+		
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="dist/css/style.css">
+
+</head>
+<body ng-app="app" ng-controller="NationController" ng-init="initialize()">
+		<div class="app container">
+				<div class="app--header">
+						<img class="app--header-sub" src="dist/IndustryWeaponLogo.svg" alt="Industry Weapon">
+						<h1>Frontend Applicant Test</h1>
+				</div>
+		<div class="app--body">
+			<div class="app--body-report-header">
+				<h2 class="app--body-content-report">Content Report</h4>
+				<h3 class="app--body-channels-count">Total Channel Count: {{channels}}</h4>
+				<h3 class="app--body-devices-count">Total Device Count: {{devices}}</h4>
+			</div>
+			<div class="nation--select-dropdown">
+				<select id="nation-dropdown"
+								name="nationSelect"
+								ng-model="nationSelected"
+								ng-options="nation as nation.nation for nation in nations"
+								ng-change="updateNation()"
+				>
+					<option value="">All Nations</option>
+				</select>
+			</div>
+		</div>
+		<div class="nation--selected">
+			<table cellspacing="0">
+				<tbody>
+					<tr class="nation--selected-graphs" 
+							ng-repeat="nation in selectedNation"
+					>
+						<td class="nation--selected-name"
+								ng-style="{ 'font-size': '1rem',
+											'width': '30%' }"
+						>
+							{{nation.nation}}</td>
+						<td>
+							<table cellspacing="0">
+								<tbody>
+									<tr>
+										<td class="nation-graph-channels"
+												ng-style="{ 'backgroundColor': '#0B62A4',
+															'color': 'white',
+															'padding': '6px',
+															'textAlign': 'center',
+															'font-weight': 'bold',
+															'font-size': '1.3em',
+															'width': '{{nation.data.Channels}}em' }"
+										>
+											{{nation.data.Channels}}
+										</td>
+										<td class="nation-graph-devices"
+												ng-style="{ 'backgroundColor': '#18C918',
+															'color': 'white',
+															'padding': '6px',
+															'textAlign': 'center',
+															'font-weight': 'bold',
+															'font-size': '1.3em',
+															'width': '{{nation.data.Devices}}em' }"
+										>
+											{{nation.data.Devices}}
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

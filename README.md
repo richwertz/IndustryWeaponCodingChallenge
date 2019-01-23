@@ -2,6 +2,6 @@
 ---
 ##### Run This App
 
--`git clone` this repo
--`npm install`
--Launch index.html in an HTTP Server localhost
+- `git clone` this repo
+- `npm install`
+- Launch index.html in an HTTP Server localhost
